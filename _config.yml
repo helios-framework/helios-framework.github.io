@@ -1,0 +1,9 @@
+url: http://helios.io
+title: Helios
+tagline: An Extensible Open-Source Mobile Backend Framework
+description: "Helios is an open-source framework that provides essential backend services for iOS apps, from data synchronization and push notifications to in-app purchases and passbook integration."
+permalink: /:title/
+timezone: America/Los_Angeles
+
+markdown: redcarpet
+exclude: ["sass", "config.rb"]

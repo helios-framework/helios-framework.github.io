@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<section id='overview'>
+  <img alt='Astronaut!' height='287' id='astronaut' src='/images/astronaut.png' width='262'>
+  <p>Helios is an open-source framework that provides essential backend services for iOS apps, from data synchronization and push notifications to in-app purchases and passbook integration. It allows developers to get a client-server app up-and-running in just a few minutes, and seamlessly incorporate functionality as necessary.</p>
+  <img alt='Astronomer!' height='248' id='astronomer' src='/images/astronomer.png' width='230'>
+  <p>Helios is a constellation of mobile backend components—Mix and match to meet the specific needs of your app. Built on the <a href="http://rack.github.com">Rack</a> webserver interface, Helios can be easily added into any existing <a href="http://rubyonrails.org">Rails</a> or <a href="http://sinatrarb.com">Sinatra</a> application, or used by itself.</p>
+</section>
+<section id='get-started'>
+  <h1>Get Started</h1>
+  <p>Use the following commands to install Helios, create a new app, and start running the app locally at <code>http://localhost:5000/admin</code></p>
+
+  <pre><code>$ gem install helios&#x000A;$ helios new app&#x000A;$ cd app &amp;&amp; helios start&#x000A;</code></pre>
+</section>
+<section id='features'>
+  <h1>Features</h1>
+  <dl>
+    <dt>Data Synchronization</dt>
+    <dd>Read and write between the client and server over a conventional REST webservice, which can even be automatically-generated from a Core Data model.</dd>
+    <dt>Push Notification</dt>
+    <dd>A device registration endpoint, paired with an easy-to-use admin interface that lets you manually send push notifications to selected devices.</dd>
+    <dt>In-App Purchases</dt>
+    <dd>Track and verify all of the transactions made in your application.</dd>
+    <dt>Passbook</dt>
+    <dd>Everything you need to interface as a Passbook webservice, including pass registration, updating, and notifications.</dd>
+    <dt>Newsstand</dt>
+    <dd>Complete management of issues, covers, and assets, with plist-based web services and Atom feeds.</dd>
+    <dt>Logging &amp; Analytics</dt>
+    <dd>A powerful way to capture stats and trends from app installations.</dd>
+  </dl>
+</section>
+<section id='deploy'>
+  <h1>Deploying to Heroku</h1>
+  <img alt='3...2...1... Blastoff!' height='270' id='rocket' src='/images/rocket.png' width='260'>
+  <div class='step-1'>
+    <h2>Install Heroku Toolbelt</h2>
+
+    <p><a href="https://toolbelt.heroku.com">Install the Heroku Toolbelt</a>, and you&#39;ll have everything you need to deploy your Helios application to Heroku, including Git and the heroku terminal command.</p>
+  </div>
+  <div class='step-2'>
+    <h2>Create an App</h2>
+
+    <p>In your Helios app directory, do <code>$ heroku create app-name</code> (or tempt fate by letting Heroku generate a name for you).</p>
+  </div>
+  <div class='step-3'>
+    <h2>3...2...1... Blastoff!</h2>
+
+    <p>All that&#39;s left to do is a
+    <code>$ git push heroku master</code>
+    In almost no time at all, your app will be online and operational.</p>
+  </div>
+</section>
+<section id='client'>
+  <h1>Client Integration</h1>
+
+  <p>Of course, that&#39;s just the server half of the equation. The following iOS client libraries make it easy to integrate with Helios.</p>
+  <div id='ground-control'>
+    <h1><a href="https://github.com/mattt/GroundControl">Ground Control</a></h1>
+
+    <h2>Remote Configuration</h2>
+
+    <p>GroundControl gives you a dead-simple way to remotely configure your app, allowing you to add things like feature flags, impromptu A/B tests, or a simple &quot;message of the day&quot;).</p>
+  </div>
+  <div id='cargo-bay'>
+    <h1><a href="https://github.com/mattt/CargoBay">Cargo Bay</a></h1>
+
+    <h2>The Essential StoreKit Companion</h2>
+
+    <p>StoreKit is the Apple framework for making In-App Purchases. It&#39;s pretty good, but it has a few rough edges. CargoBay smooths out those rough parts by providing one step receipt &amp; transaction verification, and more.</p>
+  </div>
+  <div id='sky-lab'>
+    <h1><a href="https://github.com/mattt/SkyLab">SkyLab</a></h1>
+
+    <h2>Multivariate &amp; A/B Testing</h2>
+
+    <p>SkyLab is a backend-agnostic framework for multivariate and A/B testing. Test conditions are persisted across sessions and launches using NSUserDefaults, ensuring that every user will have a consistent experience, no matter which testing bucket they end up in.</p>
+  </div>
+  <div id='orbiter'>
+    <h1><a href="https://github.com/mattt/Orbiter">Orbiter</a></h1>
+
+    <h2>Push Notification Registration</h2>
+
+    <p>Orbiter is a small library that provides simple interfaces to register (and unregister) for Push Notifications with Helios.</p>
+  </div>
+  <div id='antenna'>
+    <h1><a href="https://github.com/mattt/Antenna">Antenna</a></h1>
+
+    <h2>Extensible Remote Logging</h2>
+
+    <p>Antenna logs notifications asynchronously to any number of web services, files, or Core Data entities. Each logging message comes with global state information, including a unique identifier for the device, along with any additional data from the notification itself.</p>
+  </div>
+  <img alt='Astrodog!' height='248' id='astrodog' src='/images/astrodog.png' width='230'>
+  <div id='afnetworking'>
+    <h1><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a></h1>
+
+    <h2>A Delightful iOS &amp; OS X Networking Framework</h2>
+
+    <p>AFNetworking is a delightful networking library for iOS and Mac OS X. It&#39;s built on top of NSURLConnection, NSOperation, and other familiar Foundation technologies. It has a modular architecture with well-designed, feature-rich APIs that are a joy to use.</p>
+  </div>
+  <div id='afincrementalstore'>
+    <h1><a href="https://github.com/AFNetworking/AFIncrementalStore">AFIncrementalStore</a></h1>
+
+    <h2>Core Data Persistence with AFNetworking, Done Right</h2>
+
+    <p>AFIncrementalStore is an NSIncrementalStore subclass that uses AFNetworking to automatically request resources as properties and relationships are needed.</p>
+  </div>
+</section>

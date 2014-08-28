@@ -1,0 +1,279 @@
+@import "compass"
+@import "blueprint"
+
++global-reset
+
++font-face("Bariol", font-files("/fonts/Bariol-Thin.otf"), $weight: 100, $style: normal)
++font-face("Bariol", font-files("/fonts/Bariol-Thin-Italic.otf"), $weight: 100, $style: italic)
+
++font-face("Bariol", font-files("/fonts/Bariol-Light.otf"), $weight: 400, $style: normal)
++font-face("Bariol", font-files("/fonts/Bariol-Light-Italic.otf"), $weight: 400, $style: italic)
+
++font-face("Bariol", font-files("/fonts/Bariol-Bold.otf"), $weight: 700, $style: normal)
++font-face("Bariol", font-files("/fonts/Bariol-Bold-Italic.otf"), $weight: 700, $style: italic)
+
++blueprint
+
+html body
+  font-family: "Bariol", Helvetica, sans-serif !important
+  font-size: 120%
+  line-height: 1.5
+  background: #151926 image-url("bg.jpg")
+  color: #cccccc
+  padding: 2em 0
+
+  ::selection, ::-moz-selection
+    +text-shadow(0 1px 1px #555)
+    background: transparentize(#eee, 0.7)
+
+[role="container"]
+  +container
+
+  & > section
+    +clearfix
+
+header
+  +clearfix
+  margin-bottom: 2em
+
+  h1
+    font-size: 7em
+    font-weight: 700
+    margin-bottom: 0
+
+    small
+      font-size: 0.25em
+      vertical-align: top
+      font-weight: 100
+      position: absolute
+      font-style: italic
+      color: #888
+      margin-left: -2em
+
+
+  h2
+    font-size: 3em
+    margin-top: 0
+    font-style: italic
+
+footer
+  border-top: 2px transparentize(#fff, 0.5) dashed
+  padding-top: 3em
+
+  .share
+    +clearfix
+    margin-top: 50px
+
+  p
+    margin-bottom: 0
+
+  .credits
+    font-size: 0.825em
+
+h1, h2, h3
+  line-height: 1.1
+
+h1, h1 a
+  color: #fc0046 !important
+  text-decoration: none
+
+h2
+  color: #b3b3b3
+  font-size: 1.5em
+  font-weight: 100
+
+a
+  color: #cccccc
+
+  &:visited
+    color: #b3b3b3
+
+  &:active, &:hover
+    color: #fc0046
+
+  &:active
+    text-decoration: none
+
+a#github
+  position: absolute
+  top: 0
+  right: 0
+  border: 0
+  background: image-url("github.png") top right no-repeat
+  width: 149px
+  height: 149px
+
+section
+  margin-bottom: 100px
+
+  div
+    +clearfix
+    margin-bottom: 1em
+
+  h2
+    margin-bottom: 1em
+
+dl
+  +clearfix
+
+  dt
+    color: #fc0046 !important
+    font-size: 2em
+    font-weight: 100
+    font-style: italic
+    margin-bottom: 0
+    clear: both
+
+  dd
+    margin: 0
+    margin-bottom: 1em
+    width: +span(10)
+
+  dd, dt
+    &:nth-of-type(2)
+      +prepend(1)
+
+    &:nth-of-type(3)
+      +prepend(2)
+
+    &:nth-of-type(4)
+      +prepend(7)
+
+    &:nth-of-type(5)
+      +prepend(11)
+
+    &:nth-of-type(6)
+      +prepend(15)
+
+img#diagram
+  margin: 0em auto 2em auto
+  display: block
+  clear: both
+  padding-bottom: 1em
+  display: none
+
+#overview
+  #astronaut
+    margin-top: -170px
+    margin-left: +span(18)
+    position: absolute
+
+  #astronomer
+    float: left
+
+  p
+    font-size: 1.25em
+
+  #astronaut + p
+    padding-right: +span(7)
+    min-height: 200px
+
+  #astronomer + p
+    +column(17, true)
+    float: right
+    text-align: right
+    margin-top: 3.5em
+
+#get-started
+  p
+    +column(11)
+    margin: 2em 0
+
+  pre
+    +column(11, true)
+    +border-radius(10px)
+    font-family: "Menlo", "lucida console", mono-space
+    padding: 20px
+    color: #ccc
+    background: transparentize(#ccc, 0.9)
+    border: 2px transparentize(#fff, 0.5) dashed
+    float: right
+
+
+#features
+  background: image-url("earth.png") top right no-repeat, image-url("asteroid.png") bottom left no-repeat
+  padding-bottom: 100px
+
+  h1, dt, a
+    color: #86bdc7 !important
+
+#client
+  clear: both
+  padding-top: 100px
+
+  h1, a
+    color: #bfbc3d !important
+
+  div
+    +column(10)
+    +append(1)
+
+    h1
+      font-size: 2em
+      font-style: italic
+      margin-bottom: 0.1em
+      margin-top: 1em
+
+    &:nth-of-type(2n)
+      +prepend(1)
+      +column(10, true)
+      +append(0)
+
+    &:nth-of-type(odd)
+      clear: left
+
+  #astrodog
+    display: block
+    padding: 30px 100px
+    float: right
+
+  #afnetworking, #afincrementalstore
+    margin-top: 30px
+
+  #afnetworking
+    clear: left
+    padding-left: 0
+    +append(1)
+
+  #afincrementalstore
+    clear: none !important
+    +prepend(1.25)
+
+#deploy
+  overflow: visible
+
+  h1, a
+    color: #8378C7 !important
+
+  h1
+    margin-bottom: 2em
+
+  .step-1, .step-2, .step-3
+    +column(8)
+
+    figure
+      display: block
+      margin: 20px
+      width: 200px
+      height: 270px
+
+    h2
+      text-align: center
+
+    p
+      padding: 0 40px
+
+    code
+      display: block
+      font-size: 0.75em
+      margin: 0.5em 0
+      background: transparentize(#fff, 0.75)
+      text-align: center
+
+  .step-3
+    +column(8, true)
+
+  #rocket
+    margin-top: -290px
+    margin-left: +span(18)
+
